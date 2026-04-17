@@ -59,7 +59,7 @@ def listar_clientes(conexao):
 def deletar_cliente(conexao, id):
     try:
         cursor = conexao.cursor()
-        cursor.execute('DELETE FROM tb_clientes WHERE id_cliente1 = %s', (id,))
+        cursor.execute('DELETE FROM tb_clientes WHERE id_cliente = %s', (id,))
         conexao.commit()
         print('Cliente deletado com sucesso!')
     except Exception as erro:
